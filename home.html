@@ -1,0 +1,542 @@
+<html lang="en">
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Mynerve&display=swap');
+  /* @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500;600&display=swap');
+    .sam {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
+      position: relative;
+      font-size: 14hv;
+      color: #252839;
+      -webkit-text-stroke: 0.2vw #329d52;
+
+    }
+    .sam::before{
+      content: attr(data-text);
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 0;
+      box-sizing: border-box;
+      height: 100%;
+      color: #01fe87;
+      -webkit-text-stroke: 0vw #329d52;
+      border-right: 2px solid #01fe87;
+      overflow: hidden;
+      animation: animate 6s linear infinite;
+    }
+    @keyframes animate{
+      0%{
+        width: 0;
+      }
+      70%{
+        width: 100%;
+      }
+    } */
+
+  .bt {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .bt a {
+    position: relative;
+    display: inline-block;
+    padding: 15px 30px;
+    color: #38d8d0;
+    letter-spacing: 4px;
+    text-decoration: none;
+    font-size: 24px;
+    overflow: hidden;
+    transition: 0.5s;
+  }
+
+  .bt a:hover {
+    border-radius: 15px;
+    color: #0c0d0e;
+    background: #aa29bb;
+    box-shadow: 0 0 10px #aa29bb, 0 0 40px #aa29bb, 0 0 80px #aa29bb;
+    text-decoration: none;
+    transition-delay: 1s;
+  }
+
+  .bt a span {
+    position: absolute;
+    display: block;
+  }
+
+  .bt a span:nth-child(1) {
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, #2196f3);
+
+  }
+
+  .bt a:hover span:nth-child(1) {
+    left: 100%;
+    transition: 1s;
+  }
+
+  .bt a span:nth-child(3) {
+    bottom: 0;
+    right: -100%;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(270deg, transparent, #2196f3);
+
+  }
+
+  .bt a:hover span:nth-child(3) {
+    right: 100%;
+    transition: 1s;
+    transition-delay: 0.5s;
+  }
+
+  .bt a span:nth-child(2) {
+    top: -100%;
+    right: 0;
+    width: 2px;
+    height: 100%;
+    background: linear-gradient(180deg, transparent, #2196f3);
+
+  }
+
+  .bt a:hover span:nth-child(2) {
+    top: 100%;
+    transition: 1s;
+    transition-delay: 0.25s;
+  }
+
+  .bt a span:nth-child(4) {
+    bottom: -100%;
+    left: 0;
+    width: 2px;
+    height: 100%;
+    background: linear-gradient(360deg, transparent, #2196f3);
+
+  }
+
+  .bt a:hover span:nth-child(4) {
+    bottom: 100%;
+    transition: 1s;
+    transition-delay: 0.75s;
+  }
+
+  /* .bt a{
+      background: linear-gradient(90deg, #ff0000, #ffff00, #ff00f3, #0033ff,#ff00c4,#ff0000);
+      -webkit-text-fill-color: transparent;
+      -webkit-background-clip: text;
+      animation: animate 10s linear infinite;
+    }
+    @keyframes animate {
+      0%{
+        background-position: 0%;
+      }
+      100%{
+        background-position: 400;
+      }
+      
+    } */
+  .learn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+  }
+
+  .auto-type2 {
+    color: #80d4ff;
+    align-items: center;
+    justify-content: center;
+
+  }
+
+  .auto-type {
+    font-family: "Silkscreen", sans-serif;
+  }
+</style>
+
+<head>
+  <link href="style.css" rel="stylesheet" type="text/css" />
+  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+  <link rel="shortcut icon" type="x-icon" href="/img1.jpg">
+  <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
+</head>
+
+<body>
+
+  <nav class="main-nav" id="main-nav">
+    <div style="height:80px;background: rgb(51,74,92);padding-top: 1px;">
+      <h2 class="text-center" style="color:#fff; letter-spacing:2px;">MENU</h2>
+    </div>
+    <ul class="nav nav-pills nav-stacked">
+      <li class="active"><a href="#"><i class="fa fa-home fa-fw"></i>&nbsp; Home</a></li>
+      <li><a href="#about"><i class="fa fa-user fa-fw"></i>&nbsp; About</a></li>
+      <li><a href="#what-i-do"><i class="fa fa-signal fa-fw"></i>&nbsp; What I do</a></li>
+      <li><a href="#work"><i class="fa fa-briefcase fa-fw"></i>&nbsp; Recent Work</a></li>
+      <li><a href="#contact"><i class="fa fa-envelope-o fa-fw"></i>&nbsp; Contact</a></li>
+    </ul>
+  </nav>
+
+  <div class="page-wrap">
+
+    <div class="jumbotron">
+
+      <div style="margin-top:130px" class="container">
+        <a href="#main-nav" class="h5 open-menu"><i
+            style="color:#fff; position: relative; bottom:120px; cursor:pointer;"
+            class="fa fa-bars fa-2x fa-fw"></i></a>
+        <a href="#" class="h5 close-menu"><i style="color:#fff; position: relative; bottom:120px; cursor:pointer;"
+            class="fa fa-times fa-2x fa-fw"></i></a>
+        <h1 style="font-family: 'Dancing Script', cursive;text-transform: none; ">I'm</h1>
+        <h1 style="font-family: monospace;" class="sam" data-text="SHAMIM IMRAN">SHAMIM IMRAN</h1>
+        <div class="spacer"></div>
+        <div class="cont">
+          <h1><span class="auto-type"></span></h1>
+        </div>
+
+        <div class="spacer"></div>
+        <hr>
+        <hr>
+        <h2 style="font-family: 'IBM Plex Mono', monospace;" class="text-center">I build awesome web pages</h2>
+      </div>
+    </div>
+    <div class="learn">
+      <h2>IF YOU WANT TO LEARN <span class="auto-type2"></span></h2>
+    </div>
+
+    <div class="bt">
+      <a href="https://larninglab.netlify.app" target="_blank">
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        CLICK HERE
+      </a>
+    </div>
+
+    <div class="well">
+      <div class="section" id="about">
+        <h1 style="font-family: 'Chakra Petch', sans-serif;">About</h1>
+        <hr>
+      </div>
+      <div class="container">
+        <div class="row">
+          <div class="col-md-4">
+            <div class="well">
+              <img src="img1.jpg" style="height:35%; width:100%; display:block; margin-left: auto; margin-right: auto;">
+            </div>
+          </div>
+          <div class="col-md-8">
+            <div class="well">
+              <h3 style="font-family: 'Dancing Script', cursive;">Shamim Imran</h3>
+              <p style="font-size: large;" >I'm a web developer and I would love to help you with your project. Currently, I do all web related
+                works and specialize in HTML5/CSS3, PHP, SQL. I can build any website, from huge dynamic apps to small
+                static sites, on any budget. See my work below.</p>
+              <p><a href="#form" class="btn btn-default">Contact</a> <a class="btn btn-default" href="CV.pdf"
+                  download="CV_Shamim Imran">Download CV <i class='bx bxs-download'></i></a> </p>
+            </div>
+          </div>
+        </div><!--/.row-->
+      </div><!--/.container-->
+
+      <div class="section" id="what-i-do">
+        <h1 style="font-family: 'Chakra Petch', sans-serif;">What I Do</h1>
+        <hr>
+      </div>
+
+      <div class="container">
+        <div class="row">
+          <div class="col-md-8">
+            <div class="well great">
+              <h3  style="font-family: fantasy;">Skills</h3>
+              <div class="spacer"></div>
+              <div class="spacer"></div>
+              <div class="row">
+                <div class="col-md-4">
+                  <div class="html"></div>
+                  <h4 style="font-weight: 400; display: inline;"> <b>HTML5</b></h4><br>
+                  <div class="css"></div>
+                  <h4 style="font-weight: 400; display: inline;"> <b>CSS3</b></h4><br>
+                  <div class="php"></div>
+                  <h4 style="font-weight: 400; display: inline;"> <b>PHP</b></h4><br>
+                  <div class="sql"></div>
+                  <h4 style="font-weight: 400; display: inline; margin-bottom:5px;"><b>SQL</b></h4>
+                </div>
+                <div class="col-md-8">
+                  <div class="progress">
+                    <div class="progress-bar progress-bar-html" role="progressbar" aria-valuenow="90" aria-valuemin="0"
+                      aria-valuemax="100" style="width: 90%">
+                      <span class="sr-only">HTML5 0%</span>
+                    </div>
+                  </div>
+                  <div class="progress">
+                    <div class="progress-bar progress-bar-css" role="progressbar" aria-valuenow="90" aria-valuemin="0"
+                      aria-valuemax="100" style="width: 90%">
+                      <span class="sr-only">CSS3 0%</span>
+                    </div>
+                  </div>
+                  <div class="progress">
+                    <div class="progress-bar progress-bar-php" role="progressbar" aria-valuenow="70" aria-valuemin="0"
+                      aria-valuemax="100" style="width: 70%">
+                      <span class="sr-only">PHP 0%</span>
+                    </div>
+                  </div>
+                  <div class="progress">
+                    <div class="progress-bar progress-bar-sql" role="progressbar" aria-valuenow="80" aria-valuemin="0"
+                      aria-valuemax="100" style="width: 80%">
+                      <span class="sr-only">SQL 0%</span>
+                    </div>
+                  </div>
+                </div><!--/.col-6-->
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 great">
+            <div class="well great">
+              <h3  style="font-family: fantasy;">I Build Great Websites</h3>
+              <p>Being a web developer, I can develop any website from a database driven web app to a small static site.
+                Every custom website built uses higher grade techniques and is fast, mobile friendly, scalable.</p>
+            </div>
+          </div>
+        </div><!--/.row-->
+      </div><!--/.container-->
+      <div class="work visible-lg" style="height:250px !important;">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-3">
+              <h3 style="font-size: 25px; font-family: fantasy;"><i class="fa fa-code" aria-hidden="true"></i>&nbsp;
+                Beautiful Code</h3>
+              <p>I write clean, semantic, organized, and valid markup that eliminates excess code and allows others to
+                easily understand and therfore update content in the future.</p>
+            </div>
+            <div class="col-md-3">
+              <h3 style="font-size: 25px; font-family: fantasy;"><i class="fa fa-fighter-jet"></i>&nbsp; Fast</h3>
+              <p>I build fast and efficient web sites. Fast websites always attract more visitors, and those visitors
+                are more likely to choose you over the competition. In addition, website speed is essential for <abbr
+                  title="Search Engine Optimization">SEO</abbr> &mdash; <a
+                  href="http://moz.com/blog/how-website-speed-actually-impacts-search-ranking">faster websites rank
+                  higher</a>.</p>
+            </div>
+            <div class="col-md-3">
+              <h3 style="font-size: 25px; font-family: fantasy;"><i class="fa fa-arrows-alt"></i>&nbsp; Responsive</h3>
+              <p>Responsive web design means that your website will work on any screen size, from desktops to mobile
+                phones alike. Having a website that works well across all devices and screen sizes means your website
+                has a broader reach, appealing to more visitors.</p>
+            </div>
+            <div class="col-md-3">
+              <h3 style="font-size: 25px; font-family: fantasy;"><i class="fa fa-bolt"></i>&nbsp; Powerful</h3>
+              <p>From a static single page website to a full fledged database driven web app, I build websites that give
+                your organization the potential to succeed.</p>
+            </div>
+          </div><!--/.row-->
+        </div><!--/.container-->
+      </div><!--/.work-->
+      <!--mobile work-->
+      <div class="container hidden-lg">
+        <div class="row">
+          <div class="col-md-12 col-sm-12 col-xs-12">
+            <div class="well">
+              <h3><i class="fa fa-code"></i>&nbsp; Beautiful Code</h3>
+              <p>I write clean, semantic, organized, and valid markup that eliminates excess code and allows others to
+                easily understand and therfore update content in the future.</p>
+            </div>
+          </div>
+          <div class="col-md-12 col-sm-12 col-xs-12">
+            <div class="well">
+              <h3><i class="fa fa-fighter-jet"></i>&nbsp; Fast</h3>
+              <p>I build fast and efficient web sites. Fast websites always attract more visitors, and those visitors
+                are more likely to choose you over the competition. In addition, website speed is essential for <abbr
+                  title="Search Engine Optimization">SEO</abbr> &mdash; <a
+                  href="http://moz.com/blog/how-website-speed-actually-impacts-search-ranking" target="_blank">faster
+                  websites rank higher</a>.</p>
+            </div>
+          </div>
+          <div class="col-md-12 col-sm-12 col-xs-12">
+            <div class="well">
+              <h3><i class="fa fa-arrows-alt"></i>&nbsp; Responsive</h3>
+              <p>Responsive web design means that your website will work on any screen size, from desktops to mobile
+                phones alike. Having a website that works well across all devices and screen sizes means your website
+                has a broader reach, appealing to more visitors.</p>
+            </div>
+          </div>
+          <div class="col-md-12 col-sm-12 col-xs-12">
+            <div class="well">
+              <h3><i class="fa fa-bolt"></i>&nbsp; Powerful</h3>
+              <p>From a static single page website to a full fledged database driven web app, I build websites that give
+                your organization the potential to succeed.</p>
+            </div>
+          </div>
+        </div><!--/.row-->
+      </div><!--/.container and mobile work-->
+
+
+      <div class="section" id="work">
+        <h1 style="font-family: 'Chakra Petch', sans-serif;">Recent Work</h1>
+        <hr>
+      </div>
+
+      <div class="container">
+        <div class="row">
+          <div class="col-md-6">
+            <div class="well">
+              <a href="https://larninglab.netlify.app/" target="_blank"><img src="ams.png" alt="larninglab"
+                  height="150px" class="pull-left"
+                  style="padding-right: 15px; padding-bottom: 10px; padding-top:20px;"></a>
+              <h3>LearningLab</h3>
+              <p>A website for computer science students where they can learn code</p>
+              <div class="spacer"></div>
+              <div class="spacer"></div>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="well">
+              <a href="https://github.com/iamshamimimran/Assessment-Management-System"><img src="AMS.png" alt="AMS"
+                  height="150px" class="pull-left"
+                  style="padding-right: 15px; padding-bottom: 10px; padding-top:20px;"></a>
+              <h3>Assessment Management System</h3>
+              <p>The "Assessment Management System" has been developed to override the problems prevailing manual
+                system. This Application is supported to eliminate the hardship faced by the existing system.</p>
+              </p>
+              <div class="spacer"></div>
+              <div class="spacer"></div>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="well">
+              <a href="https://github.com/iamshamimimran/Sales-and-Stock-Management-System"><img src="AMS.png"
+                  alt="SSMS" height="150px" class="pull-left"
+                  style="padding-right: 15px; padding-bottom: 10px; padding-top:20px;"></a>
+              <h3>Sales and Stock Management System</h3>
+              <p>The main objective of sales and stock management system is to manage the details of purchasing,
+                payment, customer, sales. It manages all the information about purchasing, stock, sales.</p>
+              </p>
+              <div class="spacer"></div>
+              <div class="spacer"></div>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="well">
+              <a href="https://text2qr-generate.netlify.app/" target="_blank"><img src="AMS.png" alt="T2QR"
+                  height="150px" class="pull-left"
+                  style="padding-right: 15px; padding-bottom: 10px; padding-top:20px;"></a>
+              <h3>Text to QR Code Generator</h3>
+              <p>The primary goal is to provide a reliable and user-friendly tool for individuals and organizations to
+                quickly transform text-based content into scannable QR codes, facilitating seamless information sharing,
+                marketing, and data management processes.</p>
+              </p>
+              <div class="spacer"></div>
+              <div class="spacer"></div>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="well">
+              <a href="https://nexagedc.in/" target="_blank"><img src="AMS.png" alt="nexagedc" height="150px"
+                  class="pull-left" style="padding-right: 15px; padding-bottom: 10px; padding-top:20px;"></a>
+              <h3>Nexage Design & Construction</h3>
+              <p>There team of experienced engineers and interior designers is here to bring your dream home to life in
+                a safe and stylish way, all while staying within your budget.</p>
+              </p>
+              <div class="spacer"></div>
+              <div class="spacer"></div>
+            </div>
+          </div>
+        </div><!--/.row-->
+      </div><!--/.container-->
+
+
+      <!--<div class="hidden-xs"><div class="work-together" id="contact">LETS WORK TOGETHER</div></div>-->
+      <div class="section" id="contact">
+        <h1 style="font-family: 'Chakra Petch', sans-serif;">Let&apos;s Work Together</h1>
+        <hr>
+      </div>
+
+      <div class="work-together">
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-8 col-md-8 col-sm-12 col-xs-12">
+              <h3>Send Me a Message</h3>
+              <div class="spacer"></div>
+              <form class="form-horizontal" data-netlify="true" onsubmit="submit" role="form" id="form" method="post">
+                <div class="form-group">
+                  <label for="name" class="col-sm-2 control-label">Name</label>
+                  <div class="col-sm-10">
+                    <input type="text" class="contact form-control" name="name" id="name" placeholder="Name" required>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label for="email" class="col-sm-2 control-label">Email</label>
+                  <div class="col-sm-10">
+                    <input type="email" class="contact form-control" name="email" id="email" placeholder="Email"
+                      required>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label for="subject" class="col-sm-2 control-label">Subject</label>
+                  <div class="col-sm-10">
+                    <input type="text" class="contact form-control" name="subject" id="subject" placeholder="Subject"
+                      required>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label for="message" class="col-sm-2 control-label">Message</label>
+                  <div class="col-sm-10">
+                    <textarea class="contact form-control" rows="3" name="message" id="message" placeholder="Message"
+                      required></textarea>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <div class="col-sm-offset-2 col-sm-10">
+                    <input type="submit" value="Send" class="btn btn-default" name="submit">
+                  </div>
+                </div>
+              </form>
+            </div><!--/.col-->
+            <div style="font-family: 'Averia Serif Libre', cursive;" class="col-lg-4 col-md-4 hidden-sm hidden-xs">
+              <h3>Contact Details</h3>
+              <div class="spacer"></div>
+              <p class="lead" style="margin-bottom:0px;"><i class="fa fa-map-marker"></i>&nbsp; Katahbari, Garchuk,
+                GHY-35</p>
+              <p class="lead" style="text-indent:12px">ASSAM, INDIA</p>
+              <p class="lead"><i class="fa fa-phone"></i>&nbsp; 9101366591</p>
+              <p class="lead" ><i class="fa fa-envelope"></i>&nbsp;<a style="text-decoration: none; color: #fff;" href="mailto:shamimimran35@gmail.com" target="_blank">shamimimran35@gmail.com</a></p>
+            </div>
+          </div><!--/.row-->
+        </div><!--/.container-->
+        <div class="container hidden-sm hidden-xs">
+          <div class="spacer"></div>
+          <div class="spacer"></div>
+          <footer>
+            <p style="font-family: 'IBM Plex Mono', monospace; color: black;" class="pull-right">Copyright &copy; 2023-24 <br> Made
+              WIth &#10084; by Shamim Imran <br> V 25.01.24 </p>
+          </footer>
+        </div>
+      </div><!--/.work-together-->
+
+    </div><!--/.page-wrap-->
+
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script> 
+    <script>
+      var typed = new Typed(".auto-type", {
+        strings: ["WEB DESIGNER", "WEB DEVELOPER"],
+        typeSpeed: 150,
+        backSpeed: 150,
+        loop: true
+      })
+    </script>
+    <script>
+      var typed = new Typed(".auto-type2", {
+        strings: ["Web Development", "C++", "Python", "Data Science", "C Programming", "Java", "DSA", "Machine Learning"],
+        typeSpeed: 100,
+        backSpeed: 50,
+        loop: true
+      })
+    </script>
+</body>
+
+</html>
