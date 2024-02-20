@@ -159,6 +159,10 @@
   .auto-type {
     font-family: "Silkscreen", sans-serif;
   }
+
+  #ico{
+    width: 35px;
+  }
 </style>
 
 <head>
@@ -229,17 +233,21 @@
         <div class="row">
           <div class="col-md-4">
             <div class="well">
-              <img src="img1.jpg" style="height:35%; width:100%; display:block; margin-left: auto; margin-right: auto;">
+              <img src="img1.jpg" alt="Image" style="height:35%; width:100%; border-radius: 5px; display:block; margin-left: auto; margin-right: auto;">
             </div>
           </div>
           <div class="col-md-8">
             <div class="well">
               <h3 style="font-family: 'Dancing Script', cursive;">Shamim Imran</h3>
-              <p style="font-size: large;" >I'm a web developer and I would love to help you with your project. Currently, I do all web related
+              <p style="font-size: large;">I'm a web developer and I would love to help you with your project.
+                Currently, I do all web related
                 works and specialize in HTML5/CSS3, PHP, SQL. I can build any website, from huge dynamic apps to small
                 static sites, on any budget. See my work below.</p>
-              <p><a href="#form" class="btn btn-default">Contact</a> <a class="btn btn-default" href="CV.pdf"
-                  download="CV_Shamim Imran">Download CV <i class='bx bxs-download'></i></a> </p>
+              <p>
+                <a href="#form" class="btn btn-default">Contact <i id="ico" class='bx bxs-phone-call' ></i></a> 
+                
+                <a class="btn btn-default" href="docs.html" target="_blank">View CV <i id="ico" class='bx bxs-show'></i></a> 
+                </p>
             </div>
           </div>
         </div><!--/.row-->
@@ -254,7 +262,7 @@
         <div class="row">
           <div class="col-md-8">
             <div class="well great">
-              <h3  style="font-family: fantasy;">Skills</h3>
+              <h3 style="font-family: fantasy;">Skills</h3>
               <div class="spacer"></div>
               <div class="spacer"></div>
               <div class="row">
@@ -299,7 +307,7 @@
           </div>
           <div class="col-md-4 great">
             <div class="well great">
-              <h3  style="font-family: fantasy;">I Build Great Websites</h3>
+              <h3 style="font-family: fantasy;">I Build Great Websites</h3>
               <p>Being a web developer, I can develop any website from a database driven web app to a small static site.
                 Every custom website built uses higher grade techniques and is fast, mobile friendly, scalable.</p>
             </div>
@@ -462,7 +470,8 @@
             <div class="col-lg-8 col-md-8 col-sm-12 col-xs-12">
               <h3>Send Me a Message</h3>
               <div class="spacer"></div>
-              <form action="/success.html/" class="form-horizontal" data-netlify="true" data-netlify-honeypot="bot-field" onsubmit="submit" role="form" id="form" method="post">
+              <form action="/success.html/" class="form-horizontal" data-netlify="true"
+                data-netlify-honeypot="bot-field" onsubmit="submit" role="form" id="form" method="post">
                 <div class="form-group">
                   <label for="name" class="col-sm-2 control-label">Name</label>
                   <div class="col-sm-10">
@@ -504,7 +513,8 @@
                 GHY-35</p>
               <p class="lead" style="text-indent:12px">ASSAM, INDIA</p>
               <p class="lead"><i class="fa fa-phone"></i>&nbsp;9101366591</p>
-              <p class="lead" ><i class="fa fa-envelope"></i>&nbsp;<a style="text-decoration: none; color: #fff;" href="mailto:shamimimran35@gmail.com" target="_blank">shamimimran35@gmail.com</a></p>
+              <p class="lead"><i class="fa fa-envelope"></i>&nbsp;<a style="text-decoration: none; color: #fff;"
+                  href="mailto:shamimimran35@gmail.com" target="_blank">shamimimran35@gmail.com</a></p>
             </div>
           </div><!--/.row-->
         </div><!--/.container-->
@@ -512,15 +522,16 @@
           <div class="spacer"></div>
           <div class="spacer"></div>
           <footer>
-            <p style="font-family: 'IBM Plex Mono', monospace; color: black; font-weight: bold;" class="pull-right">Copyright &copy; 2023-24 <br> Made
-              WIth &#10084; by Shamim Imran <br> V 25.01.24 </p>
+            <p style="font-family: 'IBM Plex Mono', monospace; color: black; font-weight: bold;" class="pull-right">
+              Copyright &copy; 2023-24 <br> Made
+              WIth &#10084; by Shamim Imran <br> V 20.02.24 </p>
           </footer>
         </div>
       </div><!--/.work-together-->
 
     </div><!--/.page-wrap-->
 
-    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script> 
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
     <script>
       var typed = new Typed(".auto-type", {
         strings: ["WEB DESIGNER", "WEB DEVELOPER"],
