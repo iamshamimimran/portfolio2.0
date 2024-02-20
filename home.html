@@ -126,7 +126,28 @@
     transition: 1s;
     transition-delay: 0.75s;
   }
-
+  #photoContainer img {
+    width: 100%;
+      height: 100%;
+      object-fit: cover; /* Ensure the entire image is visible without distortion */
+      transition: opacity 0.5s ease-in-out;
+      position: absolute;
+      top: 0;
+      left: 0;
+    }
+    #photoContainer {
+      width: 100%; /* Use a percentage width for responsiveness */
+      max-width: 300px; /* Set a maximum width for larger screens */
+      height: auto; /* Maintain aspect ratio */
+      overflow: hidden;
+      position: relative;
+    }
+    @media (min-width: 429px) {
+      .col-md-4{
+      display: flex;
+      justify-content: center;
+    }
+}
   /* .bt a{
       background: linear-gradient(90deg, #ff0000, #ffff00, #ff00f3, #0033ff,#ff00c4,#ff0000);
       -webkit-text-fill-color: transparent;
@@ -232,8 +253,11 @@
       <div class="container">
         <div class="row">
           <div class="col-md-4">
-            <div class="well">
-              <img src="img1.jpg" alt="Image" style="height:35%; width:100%; border-radius: 5px; display:block; margin-left: auto; margin-right: auto;">
+            <div class="well" id="photoContainer" style="height: 400px;">
+              <img src="https://raw.githubusercontent.com/iamshamimimran/portfolio2.0/main/img1.jpg" alt="Image" style=" width:100%; border-radius: 5px;">
+              <img src="https://raw.githubusercontent.com/iamshamimimran/portfolio2.0/main/img2.jpg" alt="Image" style=" width:100%; border-radius: 5px;">
+              <img src="https://raw.githubusercontent.com/iamshamimimran/portfolio2.0/main/img3.jpg" alt="Image" style=" width:100%; border-radius: 5px;">
+              <img src="https://raw.githubusercontent.com/iamshamimimran/portfolio2.0/main/img4.jpg" alt="Image" style=" width:100%; border-radius: 5px;">
             </div>
           </div>
           <div class="col-md-8">
@@ -301,7 +325,8 @@
                       <span class="sr-only">SQL 0%</span>
                     </div>
                   </div>
-                </div><!--/.col-6-->
+                </div>
+                <!--/.col-6-->
               </div>
             </div>
           </div>
@@ -312,8 +337,10 @@
                 Every custom website built uses higher grade techniques and is fast, mobile friendly, scalable.</p>
             </div>
           </div>
-        </div><!--/.row-->
-      </div><!--/.container-->
+        </div>
+        <!--/.row-->
+      </div>
+      <!--/.container-->
       <div class="work visible-lg" style="height:250px !important;">
         <div class="container">
           <div class="row">
@@ -548,6 +575,21 @@
         loop: true
       })
     </script>
+
+<script>
+  const photoContainer = document.getElementById('photoContainer');
+  const images = document.querySelectorAll('#photoContainer img');
+  let currentIndex = 0;
+
+  function changePhoto() {
+    images[currentIndex].style.opacity = 0;
+    currentIndex = (currentIndex + 1) % images.length;
+    images[currentIndex].style.opacity = 1;
+  }
+
+  setInterval(changePhoto, 3000); // Change photo every 3 seconds (adjust as needed)
+</script>
+
 </body>
 
 </html>
