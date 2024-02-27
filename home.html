@@ -187,13 +187,18 @@
   #ico{
     width: 35px;
   }
+  #dateTime {
+    font-family: IBM Plex Mono, monospace;
+    margin-top: 30px;
+      text-align: center;
+    }
 </style>
 
 <head>
   <link href="style.css" rel="stylesheet" type="text/css" />
   <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
   <link rel="shortcut icon" type="x-icon" href="/img1.jpg">
-  <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTDNEpUTHQoQUJMHLrErGJyHg89uy71MyuH9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 
 <body>
@@ -214,13 +219,8 @@
   <div class="page-wrap">
 
     <div class="jumbotron">
-
-      <div style="margin-top:130px" class="container">
-        <a href="#main-nav" class="h5 open-menu"><i
-            style="color:#fff; position: relative; bottom:120px; cursor:pointer;"
-            class="fa fa-bars fa-2x fa-fw"></i></a>
-        <a href="#" class="h5 close-menu"><i style="color:#fff; position: relative; bottom:120px; cursor:pointer;"
-            class="fa fa-times fa-2x fa-fw"></i></a>
+      <div id="dateTime"></div>
+      <div style="margin-top:50px" class="container">  
         <h1 style="font-family: 'Dancing Script', cursive;text-transform: none; ">I'm</h1>
         <h1 style="font-family: Great Vibes, cursive; text-transform: capitalize;" class="sam" data-text="Shamim Imran">Shamim Imran</h1>
         <div class="spacer"></div>
@@ -284,22 +284,22 @@
         <h1 style="font-family: 'Chakra Petch', sans-serif;">What I Do</h1>
         <hr>
       </div>
-
       <div class="container">
         <div class="row">
           <div class="col-md-8">
             <div class="well great">
               <h3 style="font-family: fantasy;">Skills</h3>            
               <div class="row">
+                
                 <div class="col-md-4" style="flex-direction: column;">
                   <div class="html"></div>
-                  <h5 style="display: inline;"> <b>HTML5</b></h5>
+                  <h4 style="display: inline;"><i class='bx bxl-html5' ></i> <b>HTML5</b></h4>
                   <div class="css"></div>
-                  <h5 style="display: inline;"> <b>CSS3</b></h5>
+                  <h4 style="display: inline;"><i class='bx bxl-css3' ></i> <b>CSS3</b></h4>
                   <div class="php"></div>
-                  <h5 style="display: inline;"> <b>PHP</b></h5>
+                  <h4 style="display: inline;"><i class='bx bxl-php' ></i> <b>PHP</b></h4>
                   <div class="sql"></div>
-                  <h5 style="display: inline; margin-bottom:5px;"><b>SQL</b></h5>
+                  <h4 style="display: inline;"><i class='bx bxl-postgresql' ></i><b>SQL</b></h4>
                 </div>
                 <div class="col-md-8">
                   <div class="progress">
@@ -464,9 +464,8 @@
                   height="100px" class="pull-left"
                   style="padding-right: 15px; padding-bottom: 10px; padding-top:20px;"></a>
               <h4 style="font-family: 'IBM Plex Mono', monospace;">Text to QR Code Generator</h4>
-              <p>The primary goal is to provide a reliable and user-friendly tool for individuals and organizations to
-                quickly transform text-based content into scannable QR codes, facilitating seamless information sharing,
-                marketing, and data management processes.</p>
+              <p>The primary goal is to provide a reliable and user-friendly tool for individuals to
+                quickly transform text-based content into scannable QR codes.</p>
               </p>
             </div>
           </div>
@@ -535,11 +534,12 @@
             <div style="font-family: 'Averia Serif Libre', cursive; display: grid;" class="col-lg-4 col-md-4 hidden-sm hidden-xs">
               <h3>Contact Details</h3>
               <div class="spacer"></div>
-              <p class="lead" style="margin-bottom:0px;"><i class="fa fa-map-marker"></i>&nbsp; Katahbari, Garchuk,
+              <p class="lead"><img style=" width: 25px; mix-blend-mode: multiply;" src="img/earth.gif" alt="">Katahbari, Garchuk,
                 GHY-35</p>
-              <p class="lead" style="text-indent:12px">ASSAM, INDIA</p>
-              <p class="lead"><i class="fa fa-phone"></i>&nbsp;9101366591</p>
-              <p class="lead"><i class="fa fa-envelope"></i>&nbsp;<a style="text-decoration: none; color: #fff;"
+              <p class="lead" style="text-indent:12px">&nbsp;ASSAM, INDIA</p>
+              <p class="lead"><img style=" width: 25px; mix-blend-mode: multiply;" src="img/calling.gif" alt=""><a style="text-decoration: none; color: #fff;"
+                href="tel:+919101366591" target="_blank">9101366591</a></p>
+              <p class="lead"><img style=" width: 25px; mix-blend-mode: multiply;" src="img/email.gif" alt=""><a style="text-decoration: none; color: #fff;"
                   href="mailto:shamimimran35@gmail.com" target="_blank">shamimimran35@gmail.com</a></p>
             </div>
           </div><!--/.row-->
@@ -588,7 +588,25 @@
 
   setInterval(changePhoto, 3000); // Change photo every 3 seconds (adjust as needed)
 </script>
+<script>
+  function updateDateTime() {
+  // Get current date and time
+  var currentDate = new Date();
 
+  // Format date and time
+  var options = { weekday: 'long', year: 'numeric', month: 'short', day: 'numeric', hour: 'numeric', minute: 'numeric', second: 'numeric', timeZoneName: 'short' };
+  var formattedDateTime = currentDate.toLocaleDateString('en-US', options);
+
+  // Update the content of the element with id "dateTime"
+  document.getElementById('dateTime').innerHTML = formattedDateTime;
+}
+
+// Call the function initially
+updateDateTime();
+
+// Update date and time every second
+setInterval(updateDateTime, 1000);
+</script>
 </body>
 
 </html>

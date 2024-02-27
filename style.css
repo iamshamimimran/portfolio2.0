@@ -453,6 +453,7 @@ h6,
 }
 
 p {
+    font-family: IBM Plex Mono, monospace;
     margin: 0 0 10px;
     color: #34495e
 }
@@ -466,7 +467,7 @@ p {
 
 @media (min-width: 768px) {
     .lead {
-        font-size: 21px
+        font-size: 20px
     }
 }
 
