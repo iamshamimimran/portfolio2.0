@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+  <link rel="shortcut icon" type="x-icon" href="/img1.jpg">
+ <title>Social Accounts</title>
+ <style>
+    body {
+        
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      margin: 0;
+      background-color: #f4f4f4;
+    }
+
+    /* .loading-container {
+      text-align: center;
+    }
+
+    .loading-spinner {
+      border: 8px solid #f3f3f3;
+      border-top: 8px solid #fa3d3d;
+      border-radius: 50%;
+      width: 50px;
+      height: 50px;
+      animation: spin 1s linear infinite;
+    }
+
+    @keyframes spin {
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
+    } */
+    .btn {
+  display: inline-block;
+  margin: 10px;
+  place-items: center;
+  background: #e3edf7b0;
+  padding: 1.4em;
+  border-radius: 10px;
+  box-shadow: 6px 6px 10px -1px rgba(0,0,0,0.15),
+	      -6px -6px 10px -1px rgba(255,255,255,0.7);
+  border: 1px solid rgba(0,0,0,0);
+  cursor: pointer;
+  transition: transform 0.5s;
+}
+
+.btn:hover {
+  box-shadow: inset 4px 4px 6px -1px rgba(0,0,0,0.2),
+	      inset -4px -4px 6px -1px rgba(255,255,255,0.7),
+	      -0.5px -0.5px 0px rgba(255,255,255,1),
+	      0.5px 0.5px 0px rgba(0,0,0,0.15),
+	      0px 12px 10px -10px rgba(0,0,0,0.05);
+  border: 1px solid rgba(0,0,0,0.1);
+  transform: translateY(0.5em);
+}
+.bx{
+ font-size: 30px;
+}
+.btn a {
+  transition: transform 0.5s;
+}
+
+.btn:hover a {
+  transform: scale(0.9);
+  fill: #333333;
+}
+
+@keyframes blinkCursor {
+  50% {
+    border-right-color: transparent;
+  }
+}
+
+@keyframes typeAndDelete {
+  0%,
+  10% {
+    width: 0;
+  }
+  45%,
+  55% {
+    width: 6.2em;
+  } /* adjust width based on content */
+  90%,
+  100% {
+    width: 0;
+  }
+}
+
+.terminal-loader {
+  border: 0.1em solid #333;
+  background-color: #1a1a1a;
+  color: #0f0;
+  font-family: "Courier New", Courier, monospace;
+  font-size: 1em;
+  padding: 1.5em 1em;
+  width: 12em;
+  margin: 100px auto;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+  position: relative;
+  overflow: hidden;
+  box-sizing: border-box;
+}
+
+.terminal-header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 1.5em;
+  background-color: #333;
+  border-top-left-radius: 4px;
+  border-top-right-radius: 4px;
+  padding: 0 0.4em;
+  box-sizing: border-box;
+}
+
+.terminal-controls {
+  float: right;
+}
+
+.control {
+  margin-top: 7px;
+  display: inline-block;
+  width: 0.6em;
+  height: 0.6em;
+  margin-left: 0.4em;
+  border-radius: 50%;
+  background-color: #777;
+}
+
+.control.close {
+  background-color: #e33;
+}
+
+.control.minimize {
+  background-color: #ee0;
+}
+
+.control.maximize {
+  background-color: #0b0;
+}
+
+.terminal-title {
+  float: left;
+  line-height: 1.5em;
+  color: #eee;
+}
+
+.text {
+  display: inline-block;
+  white-space: nowrap;
+  overflow: hidden;
+  border-right: 0.2em solid green; /* Cursor */
+  animation: typeAndDelete 5s steps(11) infinite,
+    blinkCursor 0.5s step-end infinite alternate;
+  margin-top: 1.5em;
+}
+
+  </style>
+</head>
+<body>
+  <div class="loading-container">
+    <div class="loading-spinner"></div>
+    <div class="terminal-loader">
+        <div class="terminal-header">
+          <div class="terminal-title">Status</div>
+          <div class="terminal-controls">
+            <div class="control close"></div>
+            <div class="control minimize"></div>
+            <div class="control maximize"></div>
+          </div>
+        </div>
+        <div class="text">Loading...</div>
+      </div>
+</div>
+
+
+  <!-- Your page content goes here (hidden initially) -->
+  <div id="main-content" style="display: none;">
+    <!-- Your actual content goes here -->
+
+         <a class="btn" href="https://github.com/iamshamimimran"><i class='bx bxl-github'></i></a>
+    
+        <a class="btn" href="https://www.linkedin.com/in/iamshamimimran/"><i class='bx bxl-linkedin'></i></a>
+
+        <a class="btn" href="https://twitter.com/Iamshamimimran" target="_blank"><i class='bx bxl-twitter'></i></a>
+
+        <a class="btn" href="https://www.instagram.com/x_lunatic.exe/" target="_blank"><i class='bx bxl-instagram'></i></a>
+
+        <a class="btn" href="https://www.facebook.com/lunatic.exe1/" target="_blank"><i class='bx bxl-facebook'></i></a>
+
+        <a class="btn" href="mailto:shamimimran35@gmail.com" target="_blank"><i class='bx bx-envelope'></i></a>
+
+ 
+        <a class="btn" href="https://wa.me/919101366591" target="_blank"><i class='bx bxl-whatsapp'></i></a>
+
+     
+        <a class="btn" href="#" target="_blank"><i class='bx bxl-discord'></i></a>
+  
+  </div>
+  <script>
+    // Simulate content loading (you can replace this with actual logic)
+    document.addEventListener('DOMContentLoaded', function() {
+      setTimeout(function() {
+        document.getElementById('main-content').style.display = 'block';
+        document.querySelector('.loading-container').style.display = 'none';
+      }, 5000); // Replace 3000 milliseconds with your desired loading time
+    });
+  </script>
+
+</body>
+</html>

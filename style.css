@@ -3205,7 +3205,7 @@ input[type="button"].btn-block {
 }
 
 .progress-bar-php {
-     background: linear-gradient(352deg, rgba(74,166,59,1) 16%, rgba(200,51,51,1) 45%, rgba(39,25,226,1) 100%);
+    background: linear-gradient(45deg, rgba(4,48,48,1) 16%, rgba(29,87,57,1) 41%, rgba(106,81,182,1) 100%);
 }
 
 .progress-striped .progress-bar-php {
@@ -3214,12 +3214,15 @@ input[type="button"].btn-block {
 }
 
 .progress-bar-sql {
-    background: linear-gradient(352deg, rgba(59,93,166,1) 16%, rgba(200,181,51,1) 45%, rgba(25,226,197,1) 100%);
+    background: linear-gradient(45deg, rgba(48,4,4,1) 16%, rgba(87,29,29,1) 41%, rgba(88,81,182,1) 100%);
 }
 
 .progress-striped .progress-bar-sql {
     background-image: -webkit-linear-gradient(45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
     background-image: linear-gradient(45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent)
+}
+.progress-bar-react {
+    background: linear-gradient(45deg, rgba(4,48,48,1) 16%, rgba(29,87,57,1) 41%, rgba(106,81,182,1) 100%);
 }
 
 .html,
@@ -3232,6 +3235,66 @@ input[type="button"].btn-block {
     margin-top: 10px
 }
 
+.progress-bar-html {
+    animation: progressAnimation-html 10s ease-in-out forwards;
+  }
+
+  @keyframes progressAnimation-html {
+      from{
+          width: 0;
+      }
+    to {
+      width: 90%;
+    }
+  }
+  .progress-bar-css {
+    animation: progressAnimation-css 10s ease-in-out forwards;
+  }
+
+  @keyframes progressAnimation-css {
+      from{
+          width: 0;
+      }
+    to {
+      width: 90%;
+    }
+  }
+  .progress-bar-php {
+    animation: progressAnimation-php 10s ease-in-out forwards;
+  }
+
+  @keyframes progressAnimation-php {
+      from{
+          width: 0;
+      }
+    to {
+      width: 70%;
+    }
+  }
+  .progress-bar-sql {
+    animation: progressAnimation-sql 10s ease-in-out forwards;
+  }
+
+  @keyframes progressAnimation-sql {
+      from{
+          width: 0;
+      }
+    to {
+      width: 80%;
+    }
+  }
+  .progress-bar-react {
+    animation: progressAnimation-react 10s ease-in-out forwards;
+  }
+
+  @keyframes progressAnimation-react {
+      from{
+          width: 0;
+      }
+    to {
+      width: 60%;
+    }
+  }
 .html {
    background: linear-gradient(45deg, rgba(4,48,48,1) 16%, rgba(29,87,57,1) 41%, rgba(106,81,182,1) 100%);
 }
@@ -3241,11 +3304,11 @@ input[type="button"].btn-block {
 }
 
 .php {
-    background: linear-gradient(352deg, rgba(74,166,59,1) 16%, rgba(200,51,51,1) 45%, rgba(39,25,226,1) 100%);
+   background: linear-gradient(45deg, rgba(4,48,48,1) 16%, rgba(29,87,57,1) 41%, rgba(106,81,182,1) 100%);
 }
 
 .sql {
-    background: linear-gradient(352deg, rgba(59,93,166,1) 16%, rgba(200,181,51,1) 45%, rgba(25,226,197,1) 100%);
+    background: linear-gradient(45deg, rgba(48,4,4,1) 16%, rgba(87,29,29,1) 41%, rgba(88,81,182,1) 100%);
 }
 
 .list-group {
