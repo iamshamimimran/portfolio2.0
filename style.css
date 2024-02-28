@@ -3088,7 +3088,9 @@ input[type="button"].btn-block {
     font-size: medium;
     font-family: cursive;
     border-radius: 15px;
-    background: linear-gradient(0deg, rgba(4, 48, 48, 1) 16%, rgba(29, 87, 57, 0.9472163865546218) 52%, rgba(90, 182, 81, 1) 100%);
+    background: radial-gradient(circle, rgba(17,18,22,0.83) 0%, rgba(17,18,22,0.9501050420168067) 100%);
+    /* background: radial-gradient(circle, rgba(63,94,251,0.83) 0%, rgba(222,70,252,0.829656862745098) 100%); */
+    /* background: linear-gradient(0deg, rgba(4, 48, 48, 1) 16%, rgba(29, 87, 57, 0.9472163865546218) 52%, rgba(90, 182, 81, 1) 100%); */
 }
 
 /* .work {
@@ -3101,7 +3103,7 @@ input[type="button"].btn-block {
 
 .work h3,
 .work p {
-    color: #fff !important
+    color: #ffffffd0 !important
 }
 
 .work a {
@@ -3442,10 +3444,10 @@ a.list-group-item-danger.active:focus {
     border-radius: 10px;
     box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.05)
 }
-.great{
+/* .great{
     border-radius: 10px;
     background: radial-gradient(circle, rgba(238,174,202,0.9444152661064426) 0%, rgba(152,148,233,0.8491771708683473) 100%);
-}
+} */
 
 .well blockquote {
     border-color: #ddd;

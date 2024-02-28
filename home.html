@@ -4,7 +4,7 @@
   @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap');
   @import url('https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap');
   @import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300..700&display=swap');
- 
+
   /* @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500;600&display=swap');
     .sam {
       margin: 0;
@@ -130,28 +130,36 @@
     transition: 1s;
     transition-delay: 0.75s;
   }
+
   #photoContainer img {
     width: 100%;
-      height: 100%;
-      object-fit: cover; /* Ensure the entire image is visible without distortion */
-      transition: opacity 0.5s ease-in-out;
-      position: absolute;
-      top: 0;
-      left: 0;
-    }
-    #photoContainer {
-      width: 100%; /* Use a percentage width for responsiveness */
-      max-width: 300px; /* Set a maximum width for larger screens */
-      height: auto; /* Maintain aspect ratio */
-      overflow: hidden;
-      position: relative;
-    }
-    @media (min-width: 429px) {
-      .col-md-4{
+    height: 100%;
+    object-fit: cover;
+    /* Ensure the entire image is visible without distortion */
+    transition: opacity 0.5s ease-in-out;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+
+  #photoContainer {
+    width: 100%;
+    /* Use a percentage width for responsiveness */
+    max-width: 300px;
+    /* Set a maximum width for larger screens */
+    height: auto;
+    /* Maintain aspect ratio */
+    overflow: hidden;
+    position: relative;
+  }
+
+  @media (min-width: 429px) {
+    .col-md-4 {
       display: flex;
       justify-content: center;
     }
-}
+  }
+
   /* .bt a{
       background: linear-gradient(90deg, #ff0000, #ffff00, #ff00f3, #0033ff,#ff00c4,#ff0000);
       -webkit-text-fill-color: transparent;
@@ -185,15 +193,17 @@
     font-family: "Silkscreen", sans-serif;
   }
 
-  #ico{
+  #ico {
     width: 35px;
   }
+
   #dateTime {
     font-family: IBM Plex Mono, monospace;
     margin-top: 30px;
-      text-align: center;
-    }
-  .bt{
+    text-align: center;
+  }
+
+  .bt {
     font-family: Comfortaa, sans-serif;
   }
 </style>
@@ -202,7 +212,9 @@
   <link href="style.css" rel="stylesheet" type="text/css" />
   <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
   <link rel="shortcut icon" type="x-icon" href="/img1.jpg">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTDNEpUTHQoQUJMHLrErGJyHg89uy71MyuH9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    integrity="sha512-DTDNEpUTHQoQUJMHLrErGJyHg89uy71MyuH9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 
 <body>
@@ -224,9 +236,10 @@
 
     <div class="jumbotron">
       <div id="dateTime"></div>
-      <div style="margin-top:50px" class="container">  
+      <div style="margin-top:50px" class="container">
         <h1 style="font-family: 'Dancing Script', cursive;text-transform: none; ">I'm</h1>
-        <h1 style="font-family: Great Vibes, cursive; text-transform: capitalize;" class="sam" data-text="Shamim Imran">Shamim Imran</h1>
+        <h1 style="font-family: Great Vibes, cursive; text-transform: capitalize;" class="sam" data-text="Shamim Imran">
+          Shamim Imran</h1>
         <div class="spacer"></div>
         <div class="cont">
           <h1><span class="auto-type"></span></h1>
@@ -261,24 +274,31 @@
         <div class="row">
           <div class="col-md-4">
             <div class="well" id="photoContainer" style="height: 400px;">
-              <img src="https://raw.githubusercontent.com/iamshamimimran/portfolio2.0/main/img1.jpg" alt="Image" style=" width:100%; border-radius: 5px;">
-              <img src="https://raw.githubusercontent.com/iamshamimimran/portfolio2.0/main/img2.jpg" alt="Image" style=" width:100%; border-radius: 5px;">
-              <img src="https://raw.githubusercontent.com/iamshamimimran/portfolio2.0/main/img3.jpg" alt="Image" style=" width:100%; border-radius: 5px;">
-              <img src="https://raw.githubusercontent.com/iamshamimimran/portfolio2.0/main/img4.jpg" alt="Image" style=" width:100%; border-radius: 5px;">
+              <img src="https://raw.githubusercontent.com/iamshamimimran/portfolio2.0/main/img1.jpg" alt="Image"
+                style=" width:100%; border-radius: 5px;">
+              <img src="https://raw.githubusercontent.com/iamshamimimran/portfolio2.0/main/img2.jpg" alt="Image"
+                style=" width:100%; border-radius: 5px;">
+              <img src="https://raw.githubusercontent.com/iamshamimimran/portfolio2.0/main/img3.jpg" alt="Image"
+                style=" width:100%; border-radius: 5px;">
+              <img src="https://raw.githubusercontent.com/iamshamimimran/portfolio2.0/main/img4.jpg" alt="Image"
+                style=" width:100%; border-radius: 5px;">
             </div>
           </div>
           <div class="col-md-8">
             <div class="well">
               <h3 style="font-family: 'Dancing Script', cursive;">Shamim Imran</h3>
-              <p style="font-size: large; font-family: Comfortaa, sans-serif;">I'm a web developer and I would love to help you with your project.
+              <p style="font-size: large; font-family: Comfortaa, sans-serif;">I'm a web developer and I would love to
+                help you with your project.
                 Currently, I do all web related
                 works and specialize in HTML5/CSS3, PHP, SQL. I can build any website, from huge dynamic apps to small
                 static sites, on any budget. See my work below.</p>
               <p>
-                <a style=" font-family: Comfortaa, sans-serif;" href="#form" class="btn btn-default">Contact <i id="ico" class='bx bxs-phone-call' ></i></a> 
-                
-                <a style=" font-family: Comfortaa, sans-serif;" class="btn btn-default" href="docs.html" target="_blank">View CV <i id="ico" class='bx bxs-show'></i></a> 
-                </p>
+                <a style=" font-family: Comfortaa, sans-serif;" href="#form" class="btn btn-default">Contact <i id="ico"
+                    class='bx bxs-phone-call'></i></a>
+
+                <a style=" font-family: Comfortaa, sans-serif;" class="btn btn-default" href="docs.html"
+                  target="_blank">View CV <i id="ico" class='bx bxs-show'></i></a>
+              </p>
             </div>
           </div>
         </div><!--/.row-->
@@ -292,38 +312,30 @@
         <div class="row">
           <div class="col-md-8">
             <div class="well great">
-              <h3 style="font-family: 'IBM Plex Mono', monospace;">Skills</h3>            
+              <h3 style="font-family: 'IBM Plex Mono', monospace;">Skills</h3>
               <div class="row">
-                
-                <div class="col-md-4" style="flex-direction: column;">
-                  <div class="html"></div>
-                  <h4 style="display: inline;"><i class='bx bxl-html5' ></i> <b>HTML5</b></h4>
-                  <div class="css"></div>
-                  <h4 style="display: inline;"><i class='bx bxl-css3' ></i> <b>CSS3</b></h4>
-                  <div class="php"></div>
-                  <h4 style="display: inline;"><i class='bx bxl-php' ></i> <b>PHP</b></h4>
-                  <div class="sql"></div>
-                  <h4 style="display: inline;"><i class='bx bxl-postgresql' ></i><b>SQL</b></h4>
-                </div>
-                <div class="col-md-8">
+                <div class="col-md-pull-12">
+                  <h5><i class='bx bxl-html5'><b style="font-family: 'IBM Plex Mono', monospace;">HTML5</b></i></h5>
                   <div class="progress">
                     <div class="progress-bar progress-bar-html" role="progressbar" aria-valuenow="90" aria-valuemin="0"
                       aria-valuemax="100" style="width: 90%">
-                      <span class="sr-only">HTML5 0%</span>
                     </div>
                   </div>
+                  <h5><i class='bx bxl-css3'><b style="font-family: 'IBM Plex Mono', monospace;">CSS3</b></i> </h5>
                   <div class="progress">
                     <div class="progress-bar progress-bar-css" role="progressbar" aria-valuenow="90" aria-valuemin="0"
                       aria-valuemax="100" style="width: 90%">
                       <span class="sr-only">CSS3 0%</span>
                     </div>
                   </div>
+                  <h5><i class='bx bxl-php'><b style="font-family: 'IBM Plex Mono', monospace;">PHP</b></i> </h5>
                   <div class="progress">
                     <div class="progress-bar progress-bar-php" role="progressbar" aria-valuenow="70" aria-valuemin="0"
                       aria-valuemax="100" style="width: 70%">
                       <span class="sr-only">PHP 0%</span>
                     </div>
                   </div>
+                  <h5><i class='bx bxl-postgresql'><b style="font-family: 'IBM Plex Mono', monospace;">SQL</b></i></h5>
                   <div class="progress">
                     <div class="progress-bar progress-bar-sql" role="progressbar" aria-valuenow="80" aria-valuemin="0"
                       aria-valuemax="100" style="width: 80%">
@@ -338,7 +350,8 @@
           <div class="col-md-4 great">
             <div class="well great">
               <h3 style="font-family: 'IBM Plex Mono', monospace;">I Build Great Websites</h3>
-              <p style="font-family: 'IBM Plex Mono', monospace;">Being a web developer, I can develop any website from a database driven web app to a small static site.
+              <p style="font-family: 'IBM Plex Mono', monospace;">Being a web developer, I can develop any website from
+                a database driven web app to a small static site.
                 Every custom website built uses higher grade techniques and is fast, mobile friendly, scalable.</p>
             </div>
           </div>
@@ -350,28 +363,32 @@
         <div class="container">
           <div class="row">
             <div class="col-md-3">
-              <h3 style=" font-family: Comfortaa, sans-serif;"><i class="fa fa-code" aria-hidden="true"></i>&nbsp;
+              <h3 style=" font-family: Comfortaa, sans-serif;"><i class='bx bx-code-alt'></i>&nbsp;
                 Beautiful Code</h3>
-              <p style=" font-family: IBM Plex Mono, monospace;">I write clean, semantic, organized, and valid markup that eliminates excess code and allows others to
+              <p style=" font-family: IBM Plex Mono, monospace;">I write clean, semantic, organized, and valid markup
+                that eliminates excess code and allows others to
                 easily understand and therfore update content in the future.</p>
             </div>
             <div class="col-md-3">
-              <h3 style=" font-family: Comfortaa, sans-serif;"><i class="fa fa-fighter-jet"></i>&nbsp; Fast</h3>
-              <p style=" font-family: IBM Plex Mono, monospace;">I build fast and efficient web sites. Fast websites always attract more visitors, and those visitors
+              <h3 style=" font-family: Comfortaa, sans-serif;"><i class='bx bx-fast-forward'></i>&nbsp; Fast</h3>
+              <p style=" font-family: IBM Plex Mono, monospace;">I build fast and efficient web sites. Fast websites
+                always attract more visitors, and those visitors
                 are more likely to choose you over the competition. In addition, website speed is essential for <abbr
                   title="Search Engine Optimization">SEO</abbr> &mdash; <a
                   href="http://moz.com/blog/how-website-speed-actually-impacts-search-ranking">faster websites rank
                   higher</a>.</p>
             </div>
             <div class="col-md-3">
-              <h3 style=" font-family: Comfortaa, sans-serif;"><i class="fa fa-arrows-alt"></i>&nbsp; Responsive</h3>
-              <p style=" font-family: IBM Plex Mono, monospace;">Responsive web design means that your website will work on any screen size, from desktops to mobile
+              <h3 style=" font-family: Comfortaa, sans-serif;"><i class='bx bx-cross'></i>&nbsp; Responsive</h3>
+              <p style=" font-family: IBM Plex Mono, monospace;">Responsive web design means that your website will work
+                on any screen size, from desktops to mobile
                 phones alike. Having a website that works well across all devices and screen sizes means your website
                 has a broader reach, appealing to more visitors.</p>
             </div>
             <div class="col-md-3">
-              <h3 style=" font-family: Comfortaa, sans-serif;"><i class="fa fa-bolt"></i>&nbsp; Powerful</h3>
-              <p style=" font-family: IBM Plex Mono, monospace;">From a static single page website to a full fledged database driven web app, I build websites that give
+              <h3 style=" font-family: Comfortaa, sans-serif;"><i class='bx bxs-bolt'></i>&nbsp; Powerful</h3>
+              <p style=" font-family: IBM Plex Mono, monospace;">From a static single page website to a full fledged
+                database driven web app, I build websites that give
                 your organization the potential to succeed.</p>
             </div>
           </div><!--/.row-->
@@ -382,7 +399,7 @@
         <div class="row">
           <div class="col-md-12 col-sm-12 col-xs-12">
             <div class="well">
-              <h3><i class="fa fa-code"></i>&nbsp; Beautiful Code</h3>
+              <h3 style=" font-family: Comfortaa, sans-serif;"><i class="fa fa-code"></i>&nbsp; Beautiful Code</h3>
               <p>I write clean, semantic, organized, and valid markup that eliminates excess code and allows others to
                 easily understand and therfore update content in the future.</p>
             </div>
@@ -413,11 +430,11 @@
             </div>
           </div>
         </div>
-        
+
         <!--/.row-->
-      
+
       </div>
-      
+
       <!--/.container and mobile work-->
 
 
@@ -429,24 +446,26 @@
       <div class="container">
         <div class="row">
 
-          
+
           <div class="col-md-6">
             <div class="well">
               <a href="https://larninglab.netlify.app/" target="_blank"><img src="ams.png" alt="larninglab"
                   height="100px" class="pull-left"
                   style="padding-right: 15px; padding-bottom: 10px; padding-top:20px;"></a>
               <h4 style="font-family: 'IBM Plex Mono', monospace;">LearningLab</h4>
-              <p style="font-family: Comfortaa, sans-serif;">A website for computer science students where they can learn code</p>
+              <p style="font-family: Comfortaa, sans-serif;">A website for computer science students where they can
+                learn code</p>
             </div>
           </div>
-          
+
           <div class="col-md-6">
             <div class="well">
               <a href="https://github.com/iamshamimimran/Assessment-Management-System"><img src="AMS.png" alt="AMS"
                   height="100px" class="pull-left"
                   style="padding-right: 15px; padding-bottom: 10px; padding-top:20px;"></a>
               <h4 style="font-family: 'IBM Plex Mono', monospace;">Assessment Management System</h4>
-              <p style="font-family: Comfortaa, sans-serif;">The "Assessment Management System" has been developed to override the problems prevailing manual
+              <p style="font-family: Comfortaa, sans-serif;">The "Assessment Management System" has been developed to
+                override the problems prevailing manual
                 system. This Application is supported to eliminate the hardship faced by the existing system.</p>
               </p>
             </div>
@@ -457,7 +476,8 @@
                   alt="SSMS" height="100px" class="pull-left"
                   style="padding-right: 15px; padding-bottom: 10px; padding-top:20px;"></a>
               <h4 style="font-family: 'IBM Plex Mono', monospace;">Sales and Stock Management System</h4>
-              <p style="font-family: Comfortaa, sans-serif;">The main objective of sales and stock management system is to manage the details of purchasing,
+              <p style="font-family: Comfortaa, sans-serif;">The main objective of sales and stock management system is
+                to manage the details of purchasing,
                 payment, customer, sales. It manages all the information about purchasing, stock, sales.</p>
               </p>
             </div>
@@ -468,11 +488,9 @@
                   height="100px" class="pull-left"
                   style="padding-right: 15px; padding-bottom: 10px; padding-top:20px;"></a>
               <h4 style="font-family: 'IBM Plex Mono', monospace;">Text to QR Code Generator</h4>
-              <p>The primary goal is to provide a reliable and user-friendly tool for individuals to
+              <p style="font-family: Comfortaa, sans-serif;">The primary goal is to provide a reliable and user-friendly
+                tool for individuals to
                 quickly transform text-based content into scannable QR codes.</p>
-              <p style="font-family: Comfortaa, sans-serif;">Quickly transform text-based content into scannable QR codes, facilitating seamless information sharing,
-                marketing, and data management processes.</p>
-              </p>
             </div>
           </div>
           <div class="col-md-6">
@@ -480,7 +498,8 @@
               <a href="https://nexagedc.in/" target="_blank"><img src="AMS.png" alt="nexagedc" height="100px"
                   class="pull-left" style="padding-right: 15px; padding-bottom: 10px; padding-top:20px;"></a>
               <h4 style="font-family: 'IBM Plex Mono', monospace;">Nexage Design & Construction</h4>
-              <p style="font-family: Comfortaa, sans-serif;">There team of experienced engineers and interior designers is here to bring your dream home to life in
+              <p style="font-family: Comfortaa, sans-serif;">There team of experienced engineers and interior designers
+                is here to bring your dream home to life in
                 a safe and stylish way, all while staying within your budget.</p>
               </p>
             </div>
@@ -537,16 +556,20 @@
                 </div>
               </form>
             </div><!--/.col-->
-            <div style="font-family: 'Averia Serif Libre', cursive; display: grid;" class="col-lg-4 col-md-4 hidden-sm hidden-xs">
+            <div style="font-family: 'Averia Serif Libre', cursive; display: grid;"
+              class="col-lg-4 col-md-4 hidden-sm hidden-xs">
               <h3 style="font-family: Comfortaa, sans-serif;">Contact Details</h3>
               <div class="spacer"></div>
-              <p class="lead"><img style=" width: 25px; mix-blend-mode: multiply;" src="img/earth.gif" alt="">Katahbari, Garchuk,
+              <p class="lead"><img style=" width: 25px; mix-blend-mode: multiply;" src="img/earth.gif" alt="">Katahbari,
+                Garchuk,
                 GHY-35</p>
               <p class="lead" style="text-indent:12px">&nbsp;ASSAM, INDIA</p>
-              <p class="lead"><img style=" width: 25px; mix-blend-mode: multiply;" src="img/calling.gif" alt=""><a style="text-decoration: none; color: #fff;"
-                href="tel:+919101366591" target="_blank">9101366591</a></p>
-              <p class="lead"><img style=" width: 25px; mix-blend-mode: multiply;" src="img/email.gif" alt=""><a style="text-decoration: none; color: #fff;"
-                  href="mailto:shamimimran35@gmail.com" target="_blank">shamimimran35@gmail.com</a></p>
+              <p class="lead"><img style=" width: 25px; mix-blend-mode: multiply;" src="img/calling.gif" alt=""><a
+                  style="text-decoration: none; color: #fff;" href="tel:+919101366591" target="_blank">9101366591</a>
+              </p>
+              <p class="lead"><img style=" width: 25px; mix-blend-mode: multiply;" src="img/email.gif" alt=""><a
+                  style="text-decoration: none; color: #fff;" href="mailto:shamimimran35@gmail.com"
+                  target="_blank">shamimimran35@gmail.com</a></p>
             </div>
           </div><!--/.row-->
         </div><!--/.container-->
@@ -581,38 +604,38 @@
       })
     </script>
 
-<script>
-  const photoContainer = document.getElementById('photoContainer');
-  const images = document.querySelectorAll('#photoContainer img');
-  let currentIndex = 0;
+    <script>
+      const photoContainer = document.getElementById('photoContainer');
+      const images = document.querySelectorAll('#photoContainer img');
+      let currentIndex = 0;
 
-  function changePhoto() {
-    images[currentIndex].style.opacity = 0;
-    currentIndex = (currentIndex + 1) % images.length;
-    images[currentIndex].style.opacity = 1;
-  }
+      function changePhoto() {
+        images[currentIndex].style.opacity = 0;
+        currentIndex = (currentIndex + 1) % images.length;
+        images[currentIndex].style.opacity = 1;
+      }
 
-  setInterval(changePhoto, 3000); // Change photo every 3 seconds (adjust as needed)
-</script>
-<script>
-  function updateDateTime() {
-  // Get current date and time
-  var currentDate = new Date();
+      setInterval(changePhoto, 3000); // Change photo every 3 seconds (adjust as needed)
+    </script>
+    <script>
+      function updateDateTime() {
+        // Get current date and time
+        var currentDate = new Date();
 
-  // Format date and time
-  var options = { weekday: 'long', year: 'numeric', month: 'short', day: 'numeric', hour: 'numeric', minute: 'numeric', second: 'numeric', timeZoneName: 'short' };
-  var formattedDateTime = currentDate.toLocaleDateString('en-US', options);
+        // Format date and time
+        var options = { weekday: 'long', year: 'numeric', month: 'short', day: 'numeric', hour: 'numeric', minute: 'numeric', second: 'numeric', timeZoneName: 'short' };
+        var formattedDateTime = currentDate.toLocaleDateString('en-US', options);
 
-  // Update the content of the element with id "dateTime"
-  document.getElementById('dateTime').innerHTML = formattedDateTime;
-}
+        // Update the content of the element with id "dateTime"
+        document.getElementById('dateTime').innerHTML = formattedDateTime;
+      }
 
-// Call the function initially
-updateDateTime();
+      // Call the function initially
+      updateDateTime();
 
-// Update date and time every second
-setInterval(updateDateTime, 1000);
-</script>
+      // Update date and time every second
+      setInterval(updateDateTime, 1000);
+    </script>
 </body>
 
 </html>
