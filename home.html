@@ -594,7 +594,7 @@
           <div class="spacer"></div>
           <footer>
             <p style="font-family: 'IBM Plex Mono', monospace; color: black;" class="pull-right">
-              Copyright &copy; 2023-24 <br> Made
+              Copyright &copy; 2023-<span style="font-family: 'IBM Plex Mono', monospace; color: black;" id="currentYear"></span>  <br> Made
               WIth &#10084; by Shamim Imran <br> V 20.02.24 </p>
           </footer>
         </div>
@@ -651,6 +651,11 @@
 
       // Update date and time every second
       setInterval(updateDateTime, 1000);
+    </script>
+
+    <script>
+      let currentYear= new Date().getFullYear();
+      document.getElementById('currentYear').textContent = currentYear;
     </script>
 </body>
 
