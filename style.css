@@ -3224,7 +3224,53 @@ input[type="button"].btn-block {
 .progress-bar-react {
     background: linear-gradient(45deg, rgba(4,48,48,1) 16%, rgba(29,87,57,1) 41%, rgba(106,81,182,1) 100%);
 }
-
+.box {
+    background: white;
+    border-radius: 20px;
+    display: grid;
+    grid-template-columns: 64px 1fr;
+    position: relative;
+  }
+  
+  .box-icon {
+    color: #000;
+    display: grid;
+    place-items: center;
+  }
+  
+  .box-label {
+    font-family:  'IBM Plex Mono', monospace;
+    height: 64px;
+    display: flex;
+    align-items: center;
+    padding-left: 16px;
+    font-size: 16px;
+    letter-spacing: 0.125em;
+  }
+  
+  .box-title {
+    font-family: Comfortaa, sans-serif;
+    white-space: nowrap;
+    display: flex;
+    align-items: center;
+    -ms-writing-mode: tb-rl;
+        writing-mode: vertical-rl;
+    -webkit-text-orientation: mixed;
+            text-orientation: mixed;
+    font-size: 20px;
+    padding-top: 16px;
+  }
+  
+  .box-image {
+    width: 400px;
+    height: 400px;
+    border-radius: 18px 0 18px 0;
+    overflow: hidden;
+  }
+  .box-image img {
+    width: 100%;
+    display: block;
+  }
 .html,
 .css,
 .php,
