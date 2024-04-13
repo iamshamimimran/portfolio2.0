@@ -2696,7 +2696,7 @@ input[type="button"].btn-block {
     padding: 20px;
     padding-top: 10px;
     padding-bottom: 10px;
-    background: radial-gradient(circle, rgba(174, 191, 238, 0.9668242296918768) 0%, rgba(36, 122, 247, 0.9500175070028011) 100%);
+    background: radial-gradient(circle, rgba(131,150,205,0.9164040616246498) 0%, rgba(120,105,219,0.6502976190476191) 100%);
     border: none;
     color: #fff;
     text-transform: capitalize;
@@ -2704,7 +2704,7 @@ input[type="button"].btn-block {
 
 .btn-default:hover,
 .btn-default:active {
-    background: radial-gradient(circle, rgba(174, 191, 238, 0.9668242296918768) 0%, rgba(36, 122, 247, 0.9500175070028011) 100%);
+    background: radial-gradient(circle, rgba(251,63,63,0.7875525210084033) 0%, rgba(252,70,70,0.5690651260504201) 100%);
     color: #000000;
     transition: all 1s;
 
