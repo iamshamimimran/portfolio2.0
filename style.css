@@ -3228,7 +3228,7 @@ input[type="button"].btn-block {
     background: white;
     border-radius: 20px;
     display: grid;
-    grid-template-columns: 64px 1fr;
+    grid-template-columns: 135px 1fr;
     position: relative;
   }
   
