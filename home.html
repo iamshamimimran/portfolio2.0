@@ -337,19 +337,19 @@
           <div class="col-md-8">
             <div class="well">
               <h3 style="font-family: 'Dancing Script', cursive;">Shamim Imran</h3>
-              <p style="font-size: large; font-family: Comfortaa, sans-serif;">I'm a web developer and I would love to
+              <p id="changingText" style="font-size: large; font-family: Comfortaa, sans-serif; transition: color 1s ease;">I'm a web developer and I would love to
                 help you with your project.
                 Currently, I do all web related
                 works and specialize in HTML5/CSS3, PHP, SQL. I can build any website, from huge dynamic apps to small
                 static sites, on any budget. See my work below.</p>
               <p>
-                <a style=" font-family: Comfortaa, sans-serif;" href="#form" class="btn btn-default">Contact <i id="ico"
+                <a style=" font-family: Comfortaa, sans-serif;" href="#form" id="changingButton" class="btn btn-default">Contact <i id="ico"
                     class='bx bxs-phone-call'></i></a>
 
-                <a style=" font-family: Comfortaa, sans-serif;" class="btn btn-default" href="docs.html"
+                <a style=" font-family: Comfortaa, sans-serif;" id="changingButton" class="btn btn-default" href="docs.html"
                   target="_blank">View CV <i id="ico" class='bx bxs-show'></i></a>
                   
-                  <a style=" font-family: Comfortaa, sans-serif;" class="btn btn-default" href="socialCard.html"
+                  <a style=" font-family: Comfortaa, sans-serif;"  class="btn btn-default" href="socialCard.html"
                   target="_blank">Social Cards <i id="ico" class='bx bxs-show'></i></a>
               </p>
             </div>
@@ -602,14 +602,14 @@
               class="col-lg-4 col-md-4 hidden-sm hidden-xs">
               <h3 style="font-family: Comfortaa, sans-serif;">Contact Details</h3>
               <div class="spacer"></div>
-              <p class="lead"><box-icon name='current-location' animation='burst' rotate='90' ></box-icon>Katahbari,
+              <p class="lead"><i class='bx bx-current-location' ></i>Katahbari,
                 Garchuk,
                 GHY-35</p>
               <p class="lead" style="text-indent:12px">&nbsp;ASSAM, INDIA</p>
-              <p class="lead"><box-icon name='phone-call' animation='tada' flip='horizontal' ></box-icon><a
+              <p class="lead"><i class='bx bxs-phone-call' ></i><a
                   style="text-decoration: none; color: #fff;" href="tel:+919101366591" target="_blank">9101366591</a>
               </p>
-              <p class="lead"><box-icon name='mail-send' animation='flashing' flip='horizontal' ></box-icon><a
+              <p class="lead"><i class='bx bxl-gmail' ></i><a
                   style="text-decoration: none; color: #fff;" href="mailto:shamimimran35@gmail.com"
                   target="_blank">shamimimran35@gmail.com</a></p>
             </div>
@@ -645,6 +645,37 @@
         loop: true
       })
     </script>
+<script>
+  // Function to generate a random color in hexadecimal format
+  function getRandomColor() {
+    var letters = '0123456789ABCDEF';
+    var color = '#';
+    for (var i = 0; i < 6; i++) {
+      color += letters[Math.floor(Math.random() * 16)];
+    }
+    return color;
+  }
+
+  // Function to change the color of the text with fade effect
+  function changeColorWithFade() {
+    var textElement = document.getElementById('changingText');
+    var currentColor = textElement.style.color;
+    var newColor = getRandomColor();
+    // Set the new color and trigger reflow
+    textElement.style.color = newColor;
+    // Start transition by setting the color to currentColor
+    setTimeout(function() {
+      textElement.style.color = currentColor;
+    }, 0);
+    // Delay setting final color to let transition start
+    setTimeout(function() {
+      textElement.style.color = newColor;
+    }, 50);
+  }
+
+  // Call the changeColorWithFade function every second
+  setInterval(changeColorWithFade, 3000);
+</script>
 
     <script>
       const photoContainer = document.getElementById('photoContainer');
