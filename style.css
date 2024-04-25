@@ -12,7 +12,15 @@ html {
 body {
     margin: 0
 }
-
+.text {
+    padding-top: 20px;
+    font-weight: 100;
+    font-size: 34px;
+    color: #000000;
+  }
+  .dud {
+    color: #ff0505;
+  }
 article,
 aside,
 details,

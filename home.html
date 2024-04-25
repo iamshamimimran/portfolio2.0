@@ -288,8 +288,9 @@
       <div id="dateTime"></div>
       <div style="margin-top:50px" class="container">
         <h1 style="font-family: 'Dancing Script', cursive;text-transform: none; ">I'm</h1>
-        <h1 style="font-family: Great Vibes, cursive; text-transform: capitalize;" class="sam" data-text="Shamim Imran">
-          Shamim Imran</h1>
+        <!-- <h1 style="font-family: Great Vibes, cursive; text-transform: capitalize;" class="sam" data-text="Shamim Imran">
+          Shamim Imran</h1> -->
+          <h1><div class="text"></div></h1>
         <div class="spacer"></div>
         <div class="cont">
           <h1><span class="auto-type"></span></h1>
@@ -342,7 +343,7 @@
                 Currently, I do all web related
                 works and specialize in HTML5/CSS3, PHP, SQL. I can build any website, from huge dynamic apps to small
                 static sites, on any budget. See my work below.</p>
-              <p>
+              <p>    
                 <a style=" font-family: Comfortaa, sans-serif;" href="#form" id="changingButton" class="btn btn-default">Contact <i id="ico"
                     class='bx bxs-phone-call'></i></a>
 
@@ -621,12 +622,34 @@
           <footer>
             <p style="font-family: 'IBM Plex Mono', monospace; color: black;" class="pull-right">
               Copyright &copy; 2023-<span style="font-family: 'IBM Plex Mono', monospace; color: black;" id="currentYear"></span>  <br> Made
-              WIth &#10084; by Shamim Imran <br> V 13.04.24 </p>
+              With <span style="transition: color 1s ease;" id="heart">&#10084;</span> by <a style="text-decoration: none; color: #0c0d0e;" title="Click to visit Github profile" href="https://github.com/iamshamimimran">Shamim Imran</a> <br> V 13.04.24 </p>
           </footer>
         </div>
       </div><!--/.work-together-->
 
     </div><!--/.page-wrap-->
+    <script>
+      // Get the span element
+      const heartSpan = document.getElementById('heart');
+      
+      // Array of colors to cycle through
+      const colors = ['red', 'DarkBlue', 'green', 'orange','Indigo','PaleGreen','Teal'];
+      
+      // Index to keep track of the current color
+      let colorIndex = 0;
+      
+      // Function to change the color of the span element
+      function changeColor() {
+        // Set the color of the span element
+        heartSpan.style.color = colors[colorIndex];
+        
+        // Increment the colorIndex or reset to 0 if it exceeds the length of the colors array
+        colorIndex = (colorIndex + 1) % colors.length;
+      }
+      
+      // Call the changeColor function every 1000 milliseconds (1 second)
+      setInterval(changeColor, 1500);
+      </script>
 
     <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
     <script>
@@ -637,6 +660,81 @@
         loop: true
       })
     </script>
+    <script>
+      class TextScramble {
+        constructor(el) {
+          this.el = el
+          this.chars = '!<>-_\\/[]{}—=+*^?#________'
+          this.update = this.update.bind(this)
+        }
+        setText(newText) {
+          const oldText = this.el.innerText
+          const length = Math.max(oldText.length, newText.length)
+          const promise = new Promise((resolve) => this.resolve = resolve)
+          this.queue = []
+          for (let i = 0; i < length; i++) {
+            const from = oldText[i] || ''
+            const to = newText[i] || ''
+            const start = Math.floor(Math.random() * 40)
+            const end = start + Math.floor(Math.random() * 40)
+            this.queue.push({ from, to, start, end })
+          }
+          cancelAnimationFrame(this.frameRequest)
+          this.frame = 0
+          this.update()
+          return promise
+        }
+        update() {
+          let output = ''
+          let complete = 0
+          for (let i = 0, n = this.queue.length; i < n; i++) {
+            let { from, to, start, end, char } = this.queue[i]
+            if (this.frame >= end) {
+              complete++
+              output += to
+            } else if (this.frame >= start) {
+              if (!char || Math.random() < 0.28) {
+                char = this.randomChar()
+                this.queue[i].char = char
+              }
+              output += `<span class="dud">${char}</span>`
+            } else {
+              output += from
+            }
+          }
+          this.el.innerHTML = output
+          if (complete === this.queue.length) {
+            this.resolve()
+          } else {
+            this.frameRequest = requestAnimationFrame(this.update)
+            this.frame++
+          }
+        }
+        randomChar() {
+          return this.chars[Math.floor(Math.random() * this.chars.length)]
+        }
+      }
+      const phrases = [
+        'SHAMIM IMRAN',
+        'शमीम इमरान',
+        'شميم عمران',
+        'ШАМИМ ИМРАН',
+        '沙米姆·伊姆兰'
+      ]
+      
+      const el = document.querySelector('.text')
+      const fx = new TextScramble(el)
+      
+      let counter = 0
+      const next = () => {
+        fx.setText(phrases[counter]).then(() => {
+          setTimeout(next, 1500)
+        })
+        counter = (counter + 1) % phrases.length
+      }
+      
+      next()
+            </script>
     <script>
       var typed = new Typed(".auto-type2", {
         strings: ["Web Development", "C++", "Python", "Data Science", "C Programming", "Java", "DSA", "Machine Learning"],
