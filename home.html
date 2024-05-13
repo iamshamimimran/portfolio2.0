@@ -1,4 +1,5 @@
 <html lang="en">
+  <title>Home</title>
 <style>
   @import url('https://fonts.googleapis.com/css2?family=Mynerve&display=swap');
   @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap');
@@ -664,7 +665,7 @@
       class TextScramble {
         constructor(el) {
           this.el = el
-          this.chars = '!<>-_\\/[]{}—=+*^?#________'
+          this.chars = '!<-_\/]}—=+*^?#_'
           this.update = this.update.bind(this)
         }
         setText(newText) {
@@ -675,8 +676,8 @@
           for (let i = 0; i < length; i++) {
             const from = oldText[i] || ''
             const to = newText[i] || ''
-            const start = Math.floor(Math.random() * 300)
-            const end = start + Math.floor(Math.random() * 300)
+            const start = Math.floor(Math.random() * 200)
+            const end = start + Math.floor(Math.random() * 200)
             this.queue.push({ from, to, start, end })
           }
           cancelAnimationFrame(this.frameRequest)

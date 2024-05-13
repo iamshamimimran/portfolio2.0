@@ -4,11 +4,25 @@
     
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="refresh" content="10; url=home.html">
+  <meta http-equiv="refresh" content="13; url=home.html">
     <title>received</title>
 </head>
 <style>
-    @import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&display=swap');
+    .text{
+        font-family: "Orbitron", sans-serif;
+        /* font-size: small; */
+        justify-content: center;
+        align-items: center;
+        display: flex; /* Show the divs */
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+</style>
+<!-- <style>
+    /* @import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&display=swap'); */
     .checkmark, .tnx, .tnx1 {
     display: none; /* Initially hide both divs */
 }
@@ -48,9 +62,10 @@
     }
 }
 
-</style>
+</style> -->
 <body>
-    <div class="tnx">
+    <h4><div class="text"></div></h4>
+    <!-- <div class="tnx">
         <p>We received your request;<br/> we'll be in touch shortly!</p>
     </div>
     <div class="tnx">
@@ -58,9 +73,9 @@
     </div>
     <div class="tnx1">
         <p style="font-family: monospace;" >Pause briefly for an effortless page transition.</p>
-    </div>
+    </div> -->
 </body>
-<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<!-- <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 <script>
  $(document).ready(function(){
     $(".checkmark").addClass("show");
@@ -82,6 +97,79 @@ $(document).ready(function(){
     }, 5000); // Delay showing the second div by 1 second
 });
 
-</script>
+</script> -->
+
+<script>
+    class TextScramble {
+      constructor(el) {
+        this.el = el
+        this.chars = '!<>-_\/[]{—+*^?#'
+        this.update = this.update.bind(this)
+      }
+      setText(newText) {
+        const oldText = this.el.innerText
+        const length = Math.max(oldText.length, newText.length)
+        const promise = new Promise((resolve) => this.resolve = resolve)
+        this.queue = []
+        for (let i = 0; i < length; i++) {
+          const from = oldText[i] || ''
+          const to = newText[i] || ''
+          const start = Math.floor(Math.random() * 200)
+          const end = start + Math.floor(Math.random() * 200)
+          this.queue.push({ from, to, start, end })
+        }
+        cancelAnimationFrame(this.frameRequest)
+        this.frame = 0
+        this.update()
+        return promise
+      }
+      update() {
+        let output = ''
+        let complete = 0
+        for (let i = 0, n = this.queue.length; i < n; i++) {
+          let { from, to, start, end, char } = this.queue[i]
+          if (this.frame >= end) {
+            complete++
+            output += to
+          } else if (this.frame >= start) {
+            if (!char || Math.random() < 0.10) {
+              char = this.randomChar()
+              this.queue[i].char = char
+            }
+            output += `<span class="dud">${char}</span>`
+          } else {
+            output += from
+          }
+        }
+        this.el.innerHTML = output
+        if (complete === this.queue.length) {
+          this.resolve()
+        } else {
+          this.frameRequest = requestAnimationFrame(this.update)
+          this.frame++
+        }
+      }
+      randomChar() {
+        return this.chars[Math.floor(Math.random() * this.chars.length)]
+      }
+    }
+    const phrases = [
+      ' we\'ll be in touch shortly!',
+      'Pause briefly for an effortless page transition.'
+    ]
+    
+    const el = document.querySelector('.text')
+    const fx = new TextScramble(el)
+    
+    let counter = 0
+    const next = () => {
+      fx.setText(phrases[counter]).then(() => {
+        setTimeout(next, 2000)
+      })
+      counter = (counter + 1) % phrases.length
+    }
+    
+    next()
+          </script>
 
 </html>
