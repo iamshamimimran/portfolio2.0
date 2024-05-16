@@ -7,15 +7,47 @@
   <link rel="shortcut icon" type="x-icon" href="/img1.jpg">
  <title>Social Accounts</title>
  <style>
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #222222d3;
+}
+
+/* Main content styling */
+#main-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Button styling */
+.btn {
+    margin: 10px;
+    text-decoration: none;
+    font-size: 1.5em;
+    color: #333;
+}
+
+/* Mobile responsiveness */
+@media (max-width: 600px) {
     body {
-        
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      height: 100vh;
-      margin: 0;
-      background-color: #f4f4f4;
+        flex-direction: column;
+        padding: 20px;
     }
+
+    #main-content {
+        padding: 10px;
+    }
+
+    .btn {
+        margin: 5px;
+        font-size: 1.2em;
+    }
+}
+
 
     /* .loading-container {
       text-align: center;
@@ -42,7 +74,7 @@
   padding: 1.4em;
   border-radius: 10px;
   box-shadow: 6px 6px 10px -1px rgba(0,0,0,0.15),
-	      -6px -6px 10px -1px rgba(255,255,255,0.7);
+	      -6px -6px 10px -1px rgba(32, 32, 32, 0.7);
   border: 1px solid rgba(0,0,0,0);
   cursor: pointer;
   transition: transform 0.5s;
@@ -160,7 +192,6 @@
     blinkCursor 0.5s step-end infinite alternate;
   margin-top: 1.5em;
 }
-
   </style>
 </head>
 <body>
