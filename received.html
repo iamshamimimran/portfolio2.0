@@ -194,29 +194,6 @@ $(document).ready(function(){
     next()
 </script>
 
-<script>
-  document.addEventListener("DOMContentLoaded", function() {
-      // Check if the page is being loaded directly
-      const urlParams = new URLSearchParams(window.location.search);
-      const fromAnchor = urlParams.get('fromAnchor');
-
-      if (!fromAnchor) {
-          // If not coming from an anchor tag, remove the refresh meta tag
-          const metaRefresh = document.getElementById('metaRefresh');
-          if (metaRefresh) {
-              metaRefresh.remove();
-          }
-
-          // Redirect to error page
-          window.location.replace("error.html");
-      } else {
-          // If coming from the link, wait for the specified time and then redirect to received.html
-          setTimeout(function() {
-              window.location.replace("received.html");
-          }, 3000); // 3000 milliseconds (3 seconds)
-      }
-  });
-</script>
 
 
 
