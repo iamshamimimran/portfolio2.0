@@ -4,9 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Error</title>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <style>
+        
+        @import url('https://fonts.googleapis.com/css2?family=Stick&display=swap');
+
+
         body {
-            font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
             display: flex;
@@ -24,14 +28,18 @@
             box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
             transition: background-color 0.3s ease;
         }
-
-        h2 {
+        h1{
             color: #ff0000;
         }
 
+        h2 {
+            color: #ff0000;
+            font-family: "Stick", sans-serif;
+        }
+
         p {
-            color: #ffffff;
-            margin-top: 10px;
+            color: #000000;
+            margin-top: 5px;
         }
 
         a {
@@ -49,9 +57,8 @@
                 background-color: #222;
                 color: #fff;
             }
-
             .container {
-                background-color: #333;
+                background-color: #525252;
             }
         }
     </style>
@@ -70,7 +77,9 @@
 </head>
 <body>
     <div class="container">
-        <h2>Error: 1020 Page Access Denied</h2>
+        <h2>Error : 1020</h2>
+        <h1><i class='bx bxs-error' ></i></h1>
+        <h2>Page Access Denied</h2>
         <p>Sorry, direct access to this page is not allowed.</p>
         <p>Please <a href="home.html">click here</a> to go to the home page.</p>
     </div>

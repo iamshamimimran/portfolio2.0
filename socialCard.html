@@ -203,6 +203,8 @@
         <a class="btn" href="#" target="_blank"><i class='bx bxl-discord'></i></a>
   
   </div>
+
+  
   <script>
     // Simulate content loading (you can replace this with actual logic)
     document.addEventListener('DOMContentLoaded', function() {
@@ -212,6 +214,17 @@
       }, 5000); // Replace 3000 milliseconds with your desired loading time
     });
   </script>
+
+  <script>
+    // Check if the page is being loaded directly
+    const urlParams = new URLSearchParams(window.location.search);
+    const fromAnchor = urlParams.get('fromAnchor2');
+
+    if (!fromAnchor) {
+        // If not coming from an anchor tag, redirect to a different page
+        window.location.replace("error.html");
+    }
+</script>
 
 </body>
 </html>
