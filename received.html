@@ -21,8 +21,8 @@
         transform: translate(-50%, -50%);
     }
 </style>
-<!-- <style>
-    /* @import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&display=swap'); */
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&display=swap');
     .checkmark, .tnx, .tnx1 {
     display: none; /* Initially hide both divs */
 }
@@ -62,20 +62,42 @@
     }
 }
 
-</style> -->
+@media only screen and (max-width: 600px) {
+    .text {
+        display: none;
+    }
+}
+
+/* CSS for showing the .mobile div on mobile */
+@media only screen and (max-width: 600px) {
+    .mobile {
+        display: block;
+    }
+}
+
+/* CSS for hiding the .mobile div on desktop */
+@media only screen and (min-width: 601px) {
+    .mobile {
+        display: none;
+    }
+}
+
+</style>
 <body>
     <h4><div class="text"></div></h4>
-    <!-- <div class="tnx">
-        <p>We received your request;<br/> we'll be in touch shortly!</p>
+    <div class="mobile">
+          <div class="tnx">
+            <p>We received your request;<br/> we'll be in touch shortly!</p>
+          </div>
+          <div class="tnx">
+            <p>We received your request;<br/> we'll be in touch shortly!</p>
+          </div>
+          <div class="tnx1">
+            <p style="font-family: monospace;" >Pause briefly for an effortless page transition.</p>
+          </div>
     </div>
-    <div class="tnx">
-        <p>We received your request;<br/> we'll be in touch shortly!</p>
-    </div>
-    <div class="tnx1">
-        <p style="font-family: monospace;" >Pause briefly for an effortless page transition.</p>
-    </div> -->
 </body>
-<!-- <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 <script>
  $(document).ready(function(){
     $(".checkmark").addClass("show");
@@ -97,7 +119,7 @@ $(document).ready(function(){
     }, 5000); // Delay showing the second div by 1 second
 });
 
-</script> -->
+</script>
 
 <script>
     class TextScramble {
@@ -170,6 +192,32 @@ $(document).ready(function(){
     }
     
     next()
-          </script>
+</script>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+      // Check if the page is being loaded directly
+      const urlParams = new URLSearchParams(window.location.search);
+      const fromAnchor = urlParams.get('fromAnchor');
+
+      if (!fromAnchor) {
+          // If not coming from an anchor tag, remove the refresh meta tag
+          const metaRefresh = document.getElementById('metaRefresh');
+          if (metaRefresh) {
+              metaRefresh.remove();
+          }
+
+          // Redirect to error page
+          window.location.replace("error.html");
+      } else {
+          // If coming from the link, wait for the specified time and then redirect to received.html
+          setTimeout(function() {
+              window.location.replace("received.html");
+          }, 3000); // 3000 milliseconds (3 seconds)
+      }
+  });
+</script>
+
+
 
 </html>

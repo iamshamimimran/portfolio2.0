@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Error</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            transition: background-color 0.3s ease;
+        }
+
+        .container {
+            text-align: center;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+            transition: background-color 0.3s ease;
+        }
+
+        h2 {
+            color: #ff0000;
+        }
+
+        p {
+            color: #ffffff;
+            margin-top: 10px;
+        }
+
+        a {
+            color: #007bff;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+        /* Dark mode */
+        @media (prefers-color-scheme: dark) {
+            body {
+                background-color: #222;
+                color: #fff;
+            }
+
+            .container {
+                background-color: #333;
+            }
+        }
+    </style>
+      <script>
+        const toggleSwitch = document.getElementById('toggle');
+        const currentTheme = localStorage.getItem('theme');
+
+        if (currentTheme) {
+            document.documentElement.setAttribute('data-theme', currentTheme);
+
+            if (currentTheme === 'dark') {
+                toggleSwitch.checked = true;
+            }
+        }
+    </script>
+</head>
+<body>
+    <div class="container">
+        <h2>Error: 1020 Page Access Denied</h2>
+        <p>Sorry, direct access to this page is not allowed.</p>
+        <p>Please <a href="home.html">click here</a> to go to the home page.</p>
+    </div>
+
+  
+</body>
+</html>
