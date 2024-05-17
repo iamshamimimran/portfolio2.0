@@ -587,6 +587,13 @@
                   </div>
                 </div>
                 <div class="form-group">
+                  <label for="address" class="col-sm-2 control-label">Address</label>
+                  <div class="col-sm-10">
+                      <samp style="color: rgb(0, 0, 0);">Edit your address if needed:</samp>
+                      <input type="text" class="contact form-control" name="address" id="address" placeholder="Address" required>
+                  </div>            
+              </div>
+                <div class="form-group">
                   <label for="message" class="col-sm-2 control-label">Message</label>
                   <div class="col-sm-10">
                     <textarea class="contact form-control" rows="3" name="message" id="message" placeholder="Message"
@@ -921,6 +928,36 @@
         chart.draw(dataTable, options);
       }
     </script>
+
+<script>
+  window.onload = function() {
+      if (navigator.geolocation) {
+          navigator.geolocation.getCurrentPosition(
+              (position) => {
+                  const lat = position.coords.latitude;
+                  const lon = position.coords.longitude;
+
+                  fetch(`https://nominatim.openstreetmap.org/reverse?format=json&lat=${lat}&lon=${lon}`)
+                      .then(response => response.json())
+                      .then(data => {
+                          const address = data.display_name;
+                          document.getElementById('address').value = address;
+                      })
+                      .catch(error => {
+                          console.error('Error fetching the address:', error);
+                      });
+              },
+              (error) => {
+                  console.error('Geolocation error:', error);
+              }
+          );
+      } else {
+          console.error('Geolocation is not supported by this browser.');
+      }
+  };
+</script>
+
+
  <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
 </body>
 
