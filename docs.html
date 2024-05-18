@@ -3,26 +3,53 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="shortcut icon" type="x-icon" href="/img1.jpg">
+    <link rel="shortcut icon" type="x-icon" href="/img1.jpg">
     <title>CURRICULUM VITAE</title>
+    <style>
+        body{
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            overflow: hidden;
+        }
 
+        .iframe-container {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+
+        iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+    </style>
     <script>
+        // Prevent default behavior
+        document.addEventListener('contextmenu', event => event.preventDefault());
+
+        window.addEventListener('keydown', function(event) {
+            if (event.ctrlKey && event.shiftKey && event.keyCode === 73) {
+                event.preventDefault(); 
+            }
+        });
+
         // Check if the page is being loaded directly
         const urlParams = new URLSearchParams(window.location.search);
         const fromAnchor = urlParams.get('fromAnchor');
-    
+
         if (!fromAnchor) {
             // If not coming from an anchor tag, redirect to a different page
             window.location.replace("error.html");
         }
-    </script>
-    
+    </script>    
 </head>
 <body>
-    <div class="container">
-        <iframe src="https://docs.google.com/document/d/1XIqQkb-ckQEvAw4NNzQBjR8HXjE9-zcz/preview" frameborder="0" width="100%" height="900px"></iframe>
+    <div class="iframe-container">
+        <iframe src="https://docs.google.com/document/d/1XIqQkb-ckQEvAw4NNzQBjR8HXjE9-zcz/preview" frameborder="0"></iframe>
     </div>
 </body>
-
-
 </html>
